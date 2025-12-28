@@ -1,0 +1,5 @@
+======================================
+1. khi tải file về lần đầu chạy 2 lệnh sau
++ font-end : npm install
++ back-end : composer install
+======================================
