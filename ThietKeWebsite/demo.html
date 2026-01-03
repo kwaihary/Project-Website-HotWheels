@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bếp Việt 4.0 - Tìm kiếm món ngon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <nav class="bg-white shadow-sm fixed w-full z-50 top-0 h-20">
+        <div class="container mx-auto px-4 h-full flex items-center justify-between max-w-6xl">
+            <div class="flex items-center gap-2 font-bold text-2xl text-red-600">
+                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white">B</div>
+                BếpViệt
+            </div>
+
+            <div class="flex-1 mx-8 max-w-2xl relative">
+                <input type="text" id="searchInput" onkeyup="searchRecipe()" 
+                       class="w-full bg-gray-100 border-2 border-transparent focus:bg-white focus:border-red-500 rounded-full py-3 pl-12 pr-4 transition outline-none" 
+                       placeholder="Bạn thèm món gì? (Gõ 'Phở' hoặc 'Sườn')...">
+                <i class="fa-solid fa-search absolute left-4 top-4 text-gray-400"></i>
+            </div>
+
+            <img src="https://i.pravatar.cc/150?img=32" class="w-10 h-10 rounded-full border cursor-pointer">
+        </div>
+    </nav>
+
+    <div class="container mx-auto pt-28 pb-10 px-4 max-w-6xl">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-red-600 pl-3">Món ngon đề xuất</h2>
+        
+        <div id="recipeGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+    </div>
+
+    <script>
+        // 1. Dữ liệu giả (Mock Data) - Trong thực tế sẽ lấy từ Database
+        const recipes = [
+            {
+                id: 1,
+                title: "Sườn xào chua ngọt",
+                image: "https://images.unsplash.com/photo-1544025162-d76694265947",
+                time: "45 phút",
+                calories: "520 Kcal",
+                desc: "Sườn mềm, thấm vị chua ngọt đậm đà đưa cơm."
+            },
+            {
+                id: 2,
+                title: "Phở Bò Hà Nội",
+                image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43",
+                time: "3 giờ",
+                calories: "450 Kcal",
+                desc: "Nước dùng trong ngọt từ xương, bò tái lăn mềm."
+            },
+            {
+                id: 3,
+                title: "Canh chua cá lóc",
+                image: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2",
+                time: "30 phút",
+                calories: "300 Kcal",
+                desc: "Vị chua thanh mát của me và bông điên điển miền Tây."
+            }
+        ];
+
+        const grid = document.getElementById('recipeGrid');
+
+        // 2. Hàm hiển thị món ăn ra màn hình
+        function renderRecipes(data) {
+            grid.innerHTML = ""; // Xóa nội dung cũ
+            data.forEach(item => {
+                const card = `
+                    <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden border border-gray-100 flex flex-col h-full">
+                        <div class="h-48 overflow-hidden relative group">
+                            <img src="${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <h3 class="font-bold text-xl text-gray-800 mb-2">${item.title}</h3>
+                            <p class="text-gray-500 text-sm mb-4 line-clamp-2">${item.desc}</p>
+                            
+                            <div class="flex gap-3 text-xs font-medium text-gray-500 mb-4 mt-auto">
+                                <span class="bg-gray-100 px-2 py-1 rounded"><i class="fa-regular fa-clock"></i> ${item.time}</span>
+                                <span class="bg-gray-100 px-2 py-1 rounded"><i class="fa-solid fa-fire"></i> ${item.calories}</span>
+                            </div>
+
+                            <a href="detail.html?id=${item.id}" class="block w-full text-center bg-red-600 text-white font-bold py-2 rounded-lg hover:bg-red-700 transition">
+                                Xem chi tiết <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        // 3. Hàm tìm kiếm
+        function searchRecipe() {
+            const keyword = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = recipes.filter(item => item.title.toLowerCase().includes(keyword));
+            renderRecipes(filtered);
+        }
+
+        // Chạy lần đầu
+        renderRecipes(recipes);
+    </script>
+</body>
+</html>

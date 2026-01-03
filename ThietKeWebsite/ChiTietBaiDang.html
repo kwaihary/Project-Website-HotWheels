@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sườn xào chua ngọt - Bếp Việt 4.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Checkbox tùy chỉnh màu đỏ */
+        .custom-checkbox:checked {
+            background-color: #dc2626;
+            border-color: #dc2626;
+        }
+        /* Hiệu ứng gạch ngang khi check vào nguyên liệu */
+        .peer:checked ~ span {
+            text-decoration: line-through;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <nav class="bg-white shadow-sm fixed w-full z-50 top-0 h-16">
+        <div class="container mx-auto px-4 h-full flex justify-between items-center max-w-7xl">
+            <div class="flex items-center gap-2 w-auto">
+                <a href="index.html" class="flex items-center gap-2 decoration-0">
+                    <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl">B</div>
+                    <span class="text-2xl font-bold text-red-600 hidden md:block">BếpViệt<span class="text-gray-700">4.0</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex flex-1 max-w-lg mx-4">
+                <div class="relative w-full">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa-solid fa-search"></i></span>
+                    <input type="text" class="w-full bg-gray-100 rounded-full py-2 pl-10 pr-4 focus:outline-none" placeholder="Tìm kiếm...">
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-red-50 hover:text-red-600 transition">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+                <img src="https://i.pravatar.cc/150?img=32" class="w-10 h-10 rounded-full border cursor-pointer">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto pt-20 pb-10 px-4 max-w-6xl">
+        
+        <div class="text-sm text-gray-500 mb-4 flex items-center gap-2">
+            <a href="#" class="hover:text-red-600">Trang chủ</a> <i class="fa-solid fa-chevron-right text-xs"></i>
+            <a href="#" class="hover:text-red-600">Món mặn</a> <i class="fa-solid fa-chevron-right text-xs"></i>
+            <span class="text-gray-800 font-semibold">Sườn xào chua ngọt</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+            <div class="lg:col-span-8">
+                
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden mb-6">
+                    
+                    <div class="relative w-full h-[400px] bg-gray-200 group">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947" class="w-full h-full object-cover">
+                        <button class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition">
+                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center pl-1 shadow-lg">
+                                <i class="fa-solid fa-play text-red-600 text-2xl"></i>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="p-6 pb-2">
+                        <div class="flex justify-between items-start mb-2">
+                            <h1 class="text-3xl font-bold text-gray-900">Sườn xào chua ngọt chuẩn vị Bắc</h1>
+                            <div class="flex flex-col items-end">
+                                <div class="text-yellow-400 text-lg">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="text-xs text-gray-500">(125 đánh giá)</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-4 py-4 border-y border-gray-100">
+                            <div class="flex items-center gap-3">
+                                <img src="https://i.pravatar.cc/150?img=45" class="w-12 h-12 rounded-full border border-gray-200">
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg">Mẹ Bắp 🌽</h4>
+                                    <button class="text-red-600 text-sm font-semibold hover:underline">Xem trang cá nhân</button>
+                                </div>
+                            </div>
+                            <button class="bg-red-50 text-red-600 px-4 py-2 rounded-full font-bold hover:bg-red-100 transition">
+                                <i class="fa-solid fa-plus"></i> Theo dõi
+                            </button>
+                        </div>
+
+                        <div class="flex justify-between text-center py-4">
+                            <div class="flex-1 border-r">
+                                <p class="text-gray-500 text-sm">Chuẩn bị</p>
+                                <p class="font-bold text-gray-900"><i class="fa-regular fa-clock text-red-500"></i> 15p</p>
+                            </div>
+                            <div class="flex-1 border-r">
+                                <p class="text-gray-500 text-sm">Nấu nướng</p>
+                                <p class="font-bold text-gray-900"><i class="fa-solid fa-fire-burner text-orange-500"></i> 30p</p>
+                            </div>
+                            <div class="flex-1 border-r">
+                                <p class="text-gray-500 text-sm">Độ khó</p>
+                                <p class="font-bold text-green-600">Dễ</p>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-gray-500 text-sm">Calo</p>
+                                <p class="font-bold text-gray-900">520 kcal</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-2 text-gray-700 leading-relaxed">
+                            <p>Hôm nay trời mưa, mình lại thèm món sườn xào chua ngọt. Công thức này mình học được từ bà ngoại, bí quyết nằm ở tỉ lệ pha nước sốt <strong>1 mắm : 1 đường : 1 giấm : 2 nước</strong> nhé cả nhà!</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 flex gap-4 border-t border-gray-100 sticky bottom-0 bg-white z-10 md:static">
+                        <button class="flex-1 bg-red-600 text-white py-3 rounded-lg font-bold shadow-md hover:bg-red-700 transition">
+                            <i class="fa-regular fa-heart"></i> Yêu thích
+                        </button>
+                        <button class="flex-1 bg-gray-100 text-gray-700 py-3 rounded-lg font-bold hover:bg-gray-200 transition">
+                            <i class="fa-solid fa-share"></i> Chia sẻ
+                        </button>
+                         <button class="flex-1 bg-gray-100 text-gray-700 py-3 rounded-lg font-bold hover:bg-gray-200 transition md:hidden">
+                            <i class="fa-solid fa-list-ul"></i> Nguyên liệu
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-xl font-bold border-l-4 border-red-600 pl-3">Cách làm</h2>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500 font-medium"><i class="fa-solid fa-mobile-screen"></i> Chế độ nấu</span>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer">
+                                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-red-600"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mb-8">
+                        <div class="flex-shrink-0">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-red-600 text-white font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Sơ chế sườn</h3>
+                            <p class="text-gray-700 mb-3">Sườn mua về rửa sạch với nước muối loãng. Chặt miếng vừa ăn khoảng 3-4cm. Luộc sơ sườn với nước sôi khoảng 2 phút để loại bỏ bọt bẩn, sau đó rửa sạch lại với nước lạnh và để ráo.</p>
+                            <img src="https://images.unsplash.com/photo-1615937691194-97dbd3f3dc29?w=600" class="rounded-lg w-full md:w-2/3 object-cover h-48">
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mb-8">
+                        <div class="flex-shrink-0">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-red-600 text-white font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Pha nước sốt thần thánh</h3>
+                            <p class="text-gray-700 mb-3">Trong một bát nhỏ, trộn đều: 3 thìa canh nước mắm, 3 thìa canh đường, 3 thìa canh giấm (hoặc chanh), 1 thìa tương ớt (để tạo màu đẹp), và 5 thìa nước lọc. Khuấy tan đường.</p>
+                            <div class="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-400 text-sm text-yellow-800">
+                                <i class="fa-regular fa-lightbulb"></i> <strong>Mẹo:</strong> Nếm thử sốt thấy vị chua ngọt hài hòa là được, tùy khẩu vị gia đình.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mb-8">
+                        <div class="flex-shrink-0">
+                            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-red-600 text-white font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Rim sườn</h3>
+                            <p class="text-gray-700">Chiên sơ sườn cho vàng đều các mặt (không chiên quá khô). Bỏ bớt dầu, phi thơm hành tỏi băm, đổ sườn vào đảo. Tiếp theo đổ bát nước sốt vào, đun lửa nhỏ liu riu khoảng 15 phút cho sườn ngấm và nước sốt sệt lại.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-8">
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded-full font-bold transition">
+                            <i class="fa-solid fa-camera text-red-500 mr-2"></i> Gửi ảnh thành quả (Cooksnap)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h3 class="font-bold text-lg mb-4">Bình luận (32)</h3>
+                    <div class="flex gap-3 mb-6">
+                        <img src="https://i.pravatar.cc/150?img=32" class="w-10 h-10 rounded-full">
+                        <div class="w-full relative">
+                            <textarea class="w-full bg-gray-100 rounded-xl p-3 focus:outline-none focus:ring-1 focus:ring-red-300 resize-none h-20" placeholder="Bạn thấy công thức này thế nào?"></textarea>
+                            <button class="absolute bottom-2 right-2 bg-red-600 text-white px-3 py-1 rounded-lg text-sm font-bold hover:bg-red-700"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <img src="https://i.pravatar.cc/150?img=12" class="w-10 h-10 rounded-full">
+                            <div class="bg-gray-100 p-3 rounded-2xl rounded-tl-none">
+                                <h4 class="font-bold text-sm">Tuấn Anh</h4>
+                                <p class="text-sm text-gray-700">Mình làm thử rồi, ngon tuyệt cú mèo! Cảm ơn mẹ Bắp nhé.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-4 space-y-6">
+                
+                <div class="bg-white rounded-xl shadow-sm p-5 sticky top-20 border border-red-100">
+                    <div class="flex justify-between items-center mb-4 border-b border-gray-100 pb-2">
+                        <h2 class="font-bold text-lg text-gray-800">Nguyên liệu</h2>
+                        <div class="flex items-center bg-gray-100 rounded-lg px-2 py-1">
+                            <button class="text-gray-500 hover:text-red-600 p-1"><i class="fa-solid fa-minus"></i></button>
+                            <span class="text-sm font-bold mx-2 w-12 text-center">4 người</span>
+                            <button class="text-gray-500 hover:text-red-600 p-1"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-3">
+                            <input type="checkbox" class="w-5 h-5 mt-0.5 accent-red-600 cursor-pointer peer">
+                            <span class="text-gray-700 peer-checked:line-through peer-checked:text-gray-400 transition">500g Sườn non</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <input type="checkbox" class="w-5 h-5 mt-0.5 accent-red-600 cursor-pointer peer">
+                            <span class="text-gray-700 peer-checked:line-through peer-checked:text-gray-400 transition">3 củ Hành tím, 1 củ Tỏi</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <input type="checkbox" class="w-5 h-5 mt-0.5 accent-red-600 cursor-pointer peer">
+                            <span class="text-gray-700 peer-checked:line-through peer-checked:text-gray-400 transition">Ớt chuông (Xanh/Đỏ) tùy thích</span>
+                        </li>
+                         <li class="flex items-start gap-3">
+                            <input type="checkbox" class="w-5 h-5 mt-0.5 accent-red-600 cursor-pointer peer">
+                            <span class="text-gray-700 peer-checked:line-through peer-checked:text-gray-400 transition">Gia vị: Mắm, Muối, Đường, Giấm, Tương ớt</span>
+                        </li>
+                    </ul>
+
+                    <button class="w-full bg-white border-2 border-red-600 text-red-600 py-2.5 rounded-lg font-bold hover:bg-red-50 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-plus"></i> Thêm vào danh sách đi chợ
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm p-5">
+                    <h3 class="font-bold text-gray-800 mb-4">Cùng tác giả</h3>
+                    <div class="space-y-4">
+                        <a href="#" class="flex gap-3 hover:bg-gray-50 p-2 rounded-lg transition">
+                            <img src="https://images.unsplash.com/photo-1626804475297-411dbe9175d6" class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4 class="font-bold text-sm text-gray-900 line-clamp-2">Canh ngao nấu chua giải nhiệt</h4>
+                                <span class="text-xs text-gray-500">20 phút • Dễ</span>
+                            </div>
+                        </a>
+                         <a href="#" class="flex gap-3 hover:bg-gray-50 p-2 rounded-lg transition">
+                            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4 class="font-bold text-sm text-gray-900 line-clamp-2">Salad ức gà sốt mè rang</h4>
+                                <span class="text-xs text-gray-500">15 phút • Healthy</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

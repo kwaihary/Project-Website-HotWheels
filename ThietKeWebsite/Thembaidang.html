@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bếp Việt 4.0 - Cộng Đồng Chia Sẻ Ẩm Thực</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f0f2f5; } /* Màu nền giống Facebook */
+    </style>
+</head>
+<body class="font-sans text-gray-900">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-orange-500 p-2 rounded-lg text-white">
+                    <i class="fas fa-utensils text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold text-orange-600 hidden md:block">Bếp Việt 4.0</span>
+            </div>
+            
+            <div class="flex-1 max-w-md mx-4">
+                <div class="relative">
+                    <input type="text" placeholder="Tìm công thức, đầu bếp..." class="w-full bg-gray-100 rounded-full py-2 px-10 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <i class="fas fa-search absolute left-4 top-3 text-gray-400"></i>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="bg-orange-100 text-orange-600 p-2 rounded-full hover:bg-orange-200"><i class="fas fa-plus"></i></button>
+                <button class="p-2 text-gray-600"><i class="fas fa-bell text-xl"></i></button>
+                <div class="w-10 h-10 rounded-full bg-gray-300 border border-orange-500 overflow-hidden">
+                    <img src="https://i.pravatar.cc/100?img=12" alt="Avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+
+<section class="bg-white rounded-xl shadow-sm overflow-hidden mb-6">
+    <div class="p-4 border-b flex justify-between items-center bg-gradient-to-r from-orange-50 to-white">
+        <div class="flex items-center gap-2">
+            <span class="flex h-3 w-3 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            </span>
+            <h3 class="font-bold text-gray-800 uppercase tracking-wide">Tin tức & Cẩm nang 4.0</h3>
+        </div>
+        <a href="#" class="text-sm text-orange-600 font-semibold hover:underline">Xem tất cả</a>
+    </div>
+
+    <div class="divide-y divide-gray-100">
+        
+        <div class="p-4 group cursor-pointer">
+            <div class="relative overflow-hidden rounded-xl mb-4">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800" 
+                     alt="News" class="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                    HOT NEWS
+                </span>
+            </div>
+            <h4 class="text-xl font-bold group-hover:text-orange-600 transition mb-2">
+                Xu hướng sử dụng AI trong việc lên thực đơn dinh dưỡng năm 2026
+            </h4>
+            <p class="text-gray-600 text-sm line-clamp-2 mb-3">
+                Công nghệ 4.0 không chỉ dừng lại ở thiết bị phần cứng, các thuật toán AI hiện nay đã có thể phân tích chỉ số cơ thể để gợi ý món ăn chuẩn xác...
+            </p>
+            <div class="flex items-center justify-between text-xs text-gray-400">
+                <div class="flex items-center gap-3">
+                    <span class="flex items-center gap-1"><i class="far fa-calendar"></i> 03/01/2026</span>
+                    <span class="flex items-center gap-1"><i class="far fa-clock"></i> 5 phút đọc</span>
+                </div>
+                <div class="flex items-center gap-1 text-orange-500 font-medium">
+                    <i class="far fa-eye"></i> 12.4k lượt xem
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 flex gap-4 hover:bg-gray-50 transition cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300" 
+                 class="w-24 h-24 object-cover rounded-lg flex-shrink-0" alt="thumb">
+            <div class="flex flex-col justify-between">
+                <h5 class="font-bold text-gray-800 line-clamp-2 hover:text-orange-600">
+                    5 sai lầm khi vệ sinh bếp từ Bosch mà 90% người nội trợ mắc phải
+                </h5>
+                <div class="flex items-center gap-3 text-[11px] text-gray-400">
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600">Mẹo vặt</span>
+                    <span>10 giờ trước</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 flex gap-4 hover:bg-gray-50 transition cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1556910110-a5a63dfd393c?auto=format&fit=crop&w=300" 
+                 class="w-24 h-24 object-cover rounded-lg flex-shrink-0" alt="thumb">
+            <div class="flex flex-col justify-between">
+                <h5 class="font-bold text-gray-800 line-clamp-2 hover:text-orange-600">
+                    Review chi tiết nồi chiên không dầu kết hợp hơi nước thế hệ mới
+                </h5>
+                <div class="flex items-center gap-3 text-[11px] text-gray-400">
+                    <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600">Review</span>
+                    <span>1 ngày trước</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="p-4 bg-gray-50 text-center">
+        <button class="text-sm font-bold text-gray-600 hover:text-orange-600 flex items-center justify-center w-full gap-2">
+            Khám phá thêm kiến thức <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+    </div>
+</section>
+
+</body>
+</html>

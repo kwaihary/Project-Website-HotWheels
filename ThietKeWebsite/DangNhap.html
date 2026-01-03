@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập / Đăng ký - Bếp Việt 4.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Hiệu ứng chuyển tab mượt mà */
+        .auth-form {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .hidden-form {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .visible-form {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <div class="min-h-screen flex items-center justify-center p-4">
+        
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden w-full max-w-5xl flex flex-col md:flex-row h-[650px]">
+            
+            <div class="hidden md:block w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1555126634-323283e090fa" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-10 text-white">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mb-4">B</div>
+                        <h2 class="text-3xl font-bold mb-2">Lan tỏa vị ngon <br>Bếp nhà Việt 🇻🇳</h2>
+                        <p class="text-gray-200 opacity-90">Tham gia cộng đồng hơn 50.000 người yêu ẩm thực. Chia sẻ công thức, nhận thực đơn mỗi ngày!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 p-8 md:p-12 relative flex flex-col justify-center bg-white">
+                
+                <a href="index.html" class="absolute top-6 right-6 text-gray-400 hover:text-red-600 transition" title="Về trang chủ">
+                    <i class="fa-solid fa-house text-xl"></i>
+                </a>
+
+                <div class="flex border-b border-gray-200 mb-8">
+                    <button onclick="switchTab('login')" id="tabLogin" class="w-1/2 py-3 font-bold text-red-600 border-b-2 border-red-600 transition focus:outline-none">
+                        Đăng nhập
+                    </button>
+                    <button onclick="switchTab('register')" id="tabRegister" class="w-1/2 py-3 font-bold text-gray-500 hover:text-red-500 transition focus:outline-none">
+                        Đăng ký
+                    </button>
+                </div>
+
+                <div id="loginForm" class="auth-form visible-form">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-1">Chào mừng trở lại! 👋</h3>
+                    <p class="text-sm text-gray-500 mb-6">Đăng nhập để tiếp tục hành trình nấu nướng.</p>
+
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400"><i class="fa-regular fa-envelope"></i></span>
+                                <input type="email" class="w-full bg-gray-50 border border-gray-300 rounded-lg py-2.5 pl-10 pr-4 focus:ring-2 focus:ring-red-500 focus:outline-none transition" placeholder="vidu@email.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="block text-sm font-medium text-gray-700">Mật khẩu</label>
+                                <a href="#" class="text-xs text-red-600 hover:underline font-medium">Quên mật khẩu?</a>
+                            </div>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400"><i class="fa-solid fa-lock"></i></span>
+                                <input type="password" id="loginPass" class="w-full bg-gray-50 border border-gray-300 rounded-lg py-2.5 pl-10 pr-10 focus:ring-2 focus:ring-red-500 focus:outline-none transition" placeholder="••••••••">
+                                <button type="button" onclick="togglePass('loginPass')" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 cursor-pointer">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button type="button" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg shadow-md transition transform active:scale-95">
+                            Đăng nhập
+                        </button>
+                    </form>
+
+                    <div class="flex items-center gap-4 my-6">
+                        <div class="h-px bg-gray-200 flex-1"></div>
+                        <span class="text-xs text-gray-400 uppercase font-bold">Hoặc</span>
+                        <div class="h-px bg-gray-200 flex-1"></div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <button class="flex items-center justify-center gap-2 border border-gray-300 bg-white py-2.5 rounded-lg hover:bg-gray-50 transition font-medium text-sm text-gray-700">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="w-5 h-5"> Google
+                        </button>
+                        <button class="flex items-center justify-center gap-2 border border-blue-600 bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 transition font-medium text-sm">
+                            <i class="fa-brands fa-facebook text-lg"></i> Facebook
+                        </button>
+                    </div>
+                </div>
+
+                <div id="registerForm" class="auth-form hidden-form">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-1">Tạo tài khoản mới 🚀</h3>
+                    <p class="text-sm text-gray-500 mb-6">Gia nhập cộng đồng Bếp Việt miễn phí.</p>
+
+                    <form class="space-y-3">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Họ và tên</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400"><i class="fa-regular fa-user"></i></span>
+                                <input type="text" class="w-full bg-gray-50 border border-gray-300 rounded-lg py-2.5 pl-10 pr-4 focus:ring-2 focus:ring-red-500 focus:outline-none transition" placeholder="Nguyễn Văn A">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400"><i class="fa-regular fa-envelope"></i></span>
+                                <input type="email" class="w-full bg-gray-50 border border-gray-300 rounded-lg py-2.5 pl-10 pr-4 focus:ring-2 focus:ring-red-500 focus:outline-none transition" placeholder="vidu@email.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Mật khẩu</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400"><i class="fa-solid fa-lock"></i></span>
+                                <input type="password" id="regPass" class="w-full bg-gray-50 border border-gray-300 rounded-lg py-2.5 pl-10 pr-10 focus:ring-2 focus:ring-red-500 focus:outline-none transition" placeholder="Ít nhất 6 ký tự">
+                                <button type="button" onclick="togglePass('regPass')" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 cursor-pointer">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                         <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nhập lại mật khẩu</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400"><i class="fa-solid fa-lock"></i></span>
+                                <input type="password" class="w-full bg-gray-50 border border-gray-300 rounded-lg py-2.5 pl-10 pr-4 focus:ring-2 focus:ring-red-500 focus:outline-none transition" placeholder="Xác nhận mật khẩu">
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-2 pt-1">
+                            <input type="checkbox" class="mt-1 accent-red-600 cursor-pointer">
+                            <label class="text-xs text-gray-500 leading-tight">Tôi đồng ý với <a href="#" class="text-red-600 hover:underline">Điều khoản sử dụng</a> và <a href="#" class="text-red-600 hover:underline">Chính sách bảo mật</a> của Bếp Việt.</label>
+                        </div>
+
+                        <button type="button" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg shadow-md transition transform active:scale-95">
+                            Đăng ký ngay
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="mt-auto pt-6 text-center text-xs text-gray-400">
+                    &copy; 2024 Bếp Việt 4.0. All rights reserved.
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Hàm chuyển Tab
+        function switchTab(tab) {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const tabLogin = document.getElementById('tabLogin');
+            const tabRegister = document.getElementById('tabRegister');
+
+            if (tab === 'login') {
+                // Show Login
+                loginForm.classList.remove('hidden-form');
+                loginForm.classList.add('visible-form');
+                registerForm.classList.remove('visible-form');
+                registerForm.classList.add('hidden-form');
+                
+                // Active Tab Style
+                tabLogin.classList.add('text-red-600', 'border-b-2', 'border-red-600');
+                tabLogin.classList.remove('text-gray-500');
+                tabRegister.classList.remove('text-red-600', 'border-b-2', 'border-red-600');
+                tabRegister.classList.add('text-gray-500');
+
+            } else {
+                // Show Register
+                registerForm.classList.remove('hidden-form');
+                registerForm.classList.add('visible-form');
+                loginForm.classList.remove('visible-form');
+                loginForm.classList.add('hidden-form');
+
+                // Active Tab Style
+                tabRegister.classList.add('text-red-600', 'border-b-2', 'border-red-600');
+                tabRegister.classList.remove('text-gray-500');
+                tabLogin.classList.remove('text-red-600', 'border-b-2', 'border-red-600');
+                tabLogin.classList.add('text-gray-500');
+            }
+        }
+
+        // Hàm Ẩn/Hiện mật khẩu
+        function togglePass(id) {
+            const input = document.getElementById(id);
+            const icon = input.nextElementSibling.querySelector('i');
+            
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
+</body>
+</html>

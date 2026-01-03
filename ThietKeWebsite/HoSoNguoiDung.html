@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ: Mẹ Bắp - Bếp Việt 4.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Ẩn thanh cuộn nhưng vẫn cuộn được */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <nav class="bg-white shadow-sm fixed w-full z-50 top-0 h-16">
+        <div class="container mx-auto px-4 h-full flex justify-between items-center max-w-7xl">
+            <div class="flex items-center gap-2 w-1/4">
+                <a href="index.html" class="flex items-center gap-2 decoration-0">
+                    <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl">B</div>
+                    <span class="text-2xl font-bold text-red-600 hidden md:block">BếpViệt<span class="text-gray-700">4.0</span></span>
+                </a>
+            </div>
+            <div class="w-2/4 hidden md:flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa-solid fa-search"></i></span>
+                    <input type="text" class="w-full bg-gray-100 text-gray-700 rounded-full py-2.5 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-red-200" placeholder="Tìm tên món, người dùng...">
+                </div>
+            </div>
+            <div class="w-1/4 flex justify-end items-center gap-4">
+                <button class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"><i class="fa-solid fa-bell"></i></button>
+                <img src="https://i.pravatar.cc/150?img=45" class="w-10 h-10 rounded-full border cursor-pointer">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto pt-16 max-w-6xl">
+        
+        <div class="bg-white shadow-sm rounded-b-xl overflow-hidden mb-6">
+            
+            <div class="h-64 w-full relative bg-gray-300">
+                <img src="https://images.unsplash.com/photo-1495521821758-ee18ece60918?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+                <button class="absolute bottom-4 right-4 bg-white/80 hover:bg-white text-gray-800 px-3 py-1.5 rounded-lg text-sm font-bold shadow transition">
+                    <i class="fa-solid fa-camera"></i> Chỉnh sửa ảnh bìa
+                </button>
+            </div>
+
+            <div class="px-8 pb-6">
+                <div class="flex flex-col md:flex-row items-start justify-between relative">
+                    
+                    <div class="flex flex-col md:flex-row items-center md:items-end gap-6 -mt-12 mb-4 md:mb-0">
+                        <div class="relative">
+                            <img src="https://i.pravatar.cc/150?img=45" class="w-40 h-40 rounded-full border-4 border-white shadow-md object-cover">
+                            <div class="absolute bottom-2 right-2 w-5 h-5 bg-green-500 rounded-full border-2 border-white"></div>
+                        </div>
+                        <div class="text-center md:text-left pt-2 md:pt-0">
+                            <h1 class="text-3xl font-bold text-gray-900 flex items-center gap-2">
+                                Mẹ Bắp 🌽 <i class="fa-solid fa-circle-check text-blue-500 text-xl"></i>
+                            </h1>
+                            <p class="text-gray-500 font-medium text-lg">Yêu bếp, nghiện nhà, thích Eat Clean 🥑</p>
+                            <div class="flex gap-4 mt-2 justify-center md:justify-start text-sm text-gray-600">
+                                <span><strong>1.5K</strong> Followers</span>
+                                <span><strong>25</strong> Đang theo dõi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 md:mt-12 flex gap-3 w-full md:w-auto px-4 md:px-0">
+                        <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-bold flex-1 md:flex-none transition">
+                            <i class="fa-solid fa-plus mr-1"></i> Theo dõi
+                        </button>
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-lg font-bold flex-1 md:flex-none transition">
+                            <i class="fa-brands fa-facebook-messenger mr-1"></i> Nhắn tin
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-8 border-t border-gray-200">
+                    <ul class="flex font-semibold text-gray-500 gap-1">
+                        <li class="py-4 px-4 text-red-600 border-b-4 border-red-600 cursor-pointer">Công thức <span class="bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full text-xs ml-1">15</span></li>
+                        <li class="py-4 px-4 hover:bg-gray-50 hover:text-gray-700 rounded-t-lg cursor-pointer transition">Bộ sưu tập</li>
+                        <li class="py-4 px-4 hover:bg-gray-50 hover:text-gray-700 rounded-t-lg cursor-pointer transition">Giới thiệu</li>
+                        <li class="py-4 px-4 hover:bg-gray-50 hover:text-gray-700 rounded-t-lg cursor-pointer transition">Ảnh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+            <div class="md:col-span-5 lg:col-span-4 space-y-4">
+                
+                <div class="bg-white rounded-xl shadow-sm p-4">
+                    <h3 class="font-bold text-lg mb-3">Giới thiệu</h3>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-gray-400 w-5"></i> Sống tại <strong>Hà Nội</strong></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-briefcase text-gray-400 w-5"></i> Content Creator tại <strong>Freelancer</strong></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-rss text-gray-400 w-5"></i> Có <strong>1,523</strong> người theo dõi</li>
+                        <li class="flex items-center gap-3"><i class="fa-brands fa-instagram text-gray-400 w-5"></i> mebap_kitchen</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm p-4">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-bold text-lg">Ảnh</h3>
+                        <a href="#" class="text-red-500 text-sm">Xem tất cả</a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-1 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="h-24 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" class="h-24 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445" class="h-24 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" class="h-24 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187" class="h-24 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543" class="h-24 w-full object-cover">
+                    </div>
+                </div>
+
+                <div class="text-xs text-gray-400">
+                    &copy; 2024 Bếp Việt 4.0 · <a href="#">Quyền riêng tư</a>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 lg:col-span-8">
+                
+                <div class="bg-white rounded-xl shadow-sm p-3 mb-4 flex justify-between items-center">
+                    <h2 class="font-bold text-lg px-2">Công thức đã đăng</h2>
+                    <div class="bg-gray-100 p-1 rounded-lg flex text-sm font-medium">
+                        <button class="bg-white text-gray-800 shadow-sm px-3 py-1 rounded-md transition">Mới nhất</button>
+                        <button class="text-gray-500 px-3 py-1 hover:bg-gray-200 rounded-md transition">Phổ biến</button>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row">
+                        <div class="md:w-5/12 relative">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947" class="h-64 md:h-full w-full object-cover">
+                            <span class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold">Món HOT</span>
+                        </div>
+                        <div class="p-5 md:w-7/12 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-xl text-gray-800 hover:text-red-600 cursor-pointer mb-2">Sườn xào chua ngọt</h3>
+                                    <button class="text-gray-400 hover:text-red-500"><i class="fa-regular fa-bookmark text-xl"></i></button>
+                                </div>
+                                <p class="text-gray-500 text-sm line-clamp-2 mb-3">Món sườn xào chuẩn vị Bắc với nước sốt sánh mịn, thịt mềm róc xương...</p>
+                                
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-red-50 text-red-600 text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-fire"></i> 520 Kcal</span>
+                                    <span class="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-clock"></i> 45 phút</span>
+                                    <span class="bg-green-50 text-green-600 text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-leaf"></i> Món mặn</span>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                                <div class="flex gap-4 text-gray-500 text-sm">
+                                    <span><i class="fa-solid fa-heart text-red-500"></i> 125</span>
+                                    <span><i class="fa-solid fa-comment"></i> 32</span>
+                                </div>
+                                <button class="text-sm font-bold text-gray-600 hover:text-red-600 transition">Xem chi tiết <i class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row">
+                        <div class="md:w-5/12 relative">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="h-64 md:h-full w-full object-cover">
+                        </div>
+                        <div class="p-5 md:w-7/12 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-xl text-gray-800 hover:text-red-600 cursor-pointer mb-2">Salad bơ ức gà (Eat Clean)</h3>
+                                    <button class="text-gray-400 hover:text-red-500"><i class="fa-regular fa-bookmark text-xl"></i></button>
+                                </div>
+                                <p class="text-gray-500 text-sm line-clamp-2 mb-3">Bữa trưa nhanh gọn cho dân văn phòng, đủ chất mà không sợ béo...</p>
+                                
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-red-50 text-red-600 text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-fire"></i> 320 Kcal</span>
+                                    <span class="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-clock"></i> 15 phút</span>
+                                    <span class="bg-green-50 text-green-600 text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-leaf"></i> Healthy</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                                <div class="flex gap-4 text-gray-500 text-sm">
+                                    <span><i class="fa-solid fa-heart text-red-500"></i> 89</span>
+                                    <span><i class="fa-solid fa-comment"></i> 14</span>
+                                </div>
+                                <button class="text-sm font-bold text-gray-600 hover:text-red-600 transition">Xem chi tiết <i class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row">
+                        <div class="md:w-5/12 relative">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" class="h-64 md:h-full w-full object-cover">
+                        </div>
+                        <div class="p-5 md:w-7/12 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-xl text-gray-800 hover:text-red-600 cursor-pointer mb-2">Bún riêu cua đồng</h3>
+                                    <button class="text-gray-400 hover:text-red-500"><i class="fa-regular fa-bookmark text-xl"></i></button>
+                                </div>
+                                <p class="text-gray-500 text-sm line-clamp-2 mb-3">Công thức nấu bún riêu cua đồng truyền thống không cần dùng bột ngọt...</p>
+                                
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-red-50 text-red-600 text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-fire"></i> 450 Kcal</span>
+                                    <span class="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded-full"><i class="fa-solid fa-clock"></i> 60 phút</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                                <div class="flex gap-4 text-gray-500 text-sm">
+                                    <span><i class="fa-solid fa-heart text-red-500"></i> 210</span>
+                                    <span><i class="fa-solid fa-comment"></i> 56</span>
+                                </div>
+                                <button class="text-sm font-bold text-gray-600 hover:text-red-600 transition">Xem chi tiết <i class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

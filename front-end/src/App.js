@@ -8,7 +8,9 @@ function App() {
   useEffect(() => { 
     async function fetchData() {
       const response = await API.CallAPI(null, { url: 'api/test', PhuongThuc: 2 });
-      alert(JSON.stringify(response));
+    if (response.Status) {
+      setData(response.data);
+    }
     }
     fetchData();
   }, []);
